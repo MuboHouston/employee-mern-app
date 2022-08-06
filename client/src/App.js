@@ -5,11 +5,12 @@ import React from "react"
 
 //We import all the components we need in out app
 import Create from "./components/create";
+import Edit from "./components/edit"
 
 const App = () => {
     return (
         <div>
-            <Create />
+            <Edit />
         </div>
     )
 }
