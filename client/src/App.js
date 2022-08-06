@@ -4,13 +4,14 @@ import React from "react"
 // import { Route, Routes } from "react-route-dom";
 
 //We import all the components we need in out app
-import Create from "./components/create";
-import Edit from "./components/edit"
+// import Create from "./components/create";
+// import Edit from "./components/edit"
+import RecordList from "./components/recordList";
 
 const App = () => {
     return (
         <div>
-            <Edit />
+            <RecordList />
         </div>
     )
 }
