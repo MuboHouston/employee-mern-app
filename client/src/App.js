@@ -6,12 +6,13 @@ import React from "react"
 //We import all the components we need in out app
 // import Create from "./components/create";
 // import Edit from "./components/edit"
-import RecordList from "./components/recordList";
+// import RecordList from "./components/recordList";
+import Navbar from "./components/navbar";
 
 const App = () => {
     return (
         <div>
-            <RecordList />
+            <Navbar />
         </div>
     )
 }
