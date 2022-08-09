@@ -23,7 +23,7 @@ export default function RecordList() {
     useEffect(() => {
         async function getRecords() {
             const herokuURL = "https://intense-springs-23488.herokuapp.com/record"
-            const response = await fetch(`http://localhost:5000/record`);
+            const response = await fetch(`http://localhost:5000/record`|| herokuURL);
 
             console.log("response", response)
             if(!response.ok) {
