@@ -35,7 +35,6 @@ export default function Navbar() {
                         <NavLink className="nav-link" to="/create">
                             Create Record
                         </NavLink>
-                        <p>Running in {process.env.NODE_ENV}.</p>
                     </li>
                     </ul>
                 </div>

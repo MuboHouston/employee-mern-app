@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { config } from "../constants";
+const URL = config.url;
 
 const Record = (props) => (
     <tr>
@@ -22,7 +24,7 @@ export default function RecordList() {
     //This method fetches the records from the db.
     useEffect(() => {
         async function getRecords() {
-            const response = await fetch(`http://localhost:5000/record`);
+            const response = await fetch(`${URL}/record`);
 
             console.log("response", response)
             if(!response.ok) {
@@ -43,7 +45,7 @@ export default function RecordList() {
 
     //This method will delete a record
     async function deleteRecord(id) {
-        await fetch(`http://localhost:5000/${id}`, {
+        await fetch(`${URL}/${id}`, {
             method: "DELETE"
         });
 

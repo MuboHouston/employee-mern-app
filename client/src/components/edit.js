@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
+import { config } from "../constants";
 
 export default function Edit() {
     const[form, setForm] = useState({
@@ -15,7 +16,9 @@ export default function Edit() {
     useEffect(() => {
         async function fetchData() {
             const id = params.id.toString();
-            const response = await fetch(`http://localhost:5000/record/${id}`);
+            const URL = config.url;
+
+            const response = await fetch(`${URL}/${id}`);
 
             console.log("edit response", response)
 
@@ -50,7 +53,9 @@ export default function Edit() {
             level: form.level,
         };
 
-        await fetch(`http://localhost:5000/update/${params.id}`, {
+        const URL = config.url;
+
+        await fetch(`${URL}/update/${params.id}`, {
             method: "POST",
             body: JSON.stringify(editedPerson),
             headers: {
