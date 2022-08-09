@@ -4,7 +4,7 @@ import React from "react"
 import { Route, Routes } from "react-router-dom";
 
 //We import all the components we need in out app
-import Create from "./components/Create";
+import Create from "./components/create";
 import Edit from "./components/Edit"
 import RecordList from "./components/RecordList";
 import Navbar from "./components/Navbar";
