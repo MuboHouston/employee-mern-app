@@ -15,7 +15,8 @@ export default function Edit() {
     useEffect(() => {
         async function fetchData() {
             const id = params.id.toString();
-            const response = await fetch(`http://localhost:5000/record/${id}`);
+            const herokuURL = `https://intense-springs-23488.herokuapp.com/${id}`
+            const response = await fetch(`http://localhost:5000/record/${id}` || herokuURL);
 
             console.log("edit response", response)
 
@@ -49,8 +50,10 @@ export default function Edit() {
             position: form.position,
             level: form.level,
         };
+        const herokuURL = `https://intense-springs-23488.herokuapp.com/${params.id}`
 
-        await fetch(`http://localhost:5000/update/${params.id}`, {
+
+        await fetch(`http://localhost:5000/update/${params.id}` || herokuURL, {
             method: "POST",
             body: JSON.stringify(editedPerson),
             headers: {
