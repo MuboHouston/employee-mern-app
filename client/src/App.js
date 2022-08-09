@@ -5,8 +5,8 @@ import { Route, Routes } from "react-router-dom";
 
 //We import all the components we need in out app
 import Create from "./components/create";
-import Edit from "./components/Edit"
-import RecordList from "./components/RecordList";
+import Edit from "./components/edit"
+import RecordList from "./components/recordList";
 import Navbar from "./components/Navbar";
 
 const App = () => {
