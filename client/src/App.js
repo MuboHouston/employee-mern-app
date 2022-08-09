@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Create from "./components/create";
 import Edit from "./components/edit"
 import RecordList from "./components/recordList";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 
 const App = () => {
     return (
