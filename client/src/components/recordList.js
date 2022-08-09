@@ -22,8 +22,7 @@ export default function RecordList() {
     //This method fetches the records from the db.
     useEffect(() => {
         async function getRecords() {
-            const herokuURL = "https://intense-springs-23488.herokuapp.com/record"
-            const response = await fetch(`http://localhost:5000/record`|| herokuURL);
+            const response = await fetch(`http://localhost:5000/record`);
 
             console.log("response", response)
             if(!response.ok) {
@@ -44,8 +43,7 @@ export default function RecordList() {
 
     //This method will delete a record
     async function deleteRecord(id) {
-        const herokuURL = `https://intense-springs-23488.herokuapp.com/${id}`
-        await fetch(`http://localhost:5000/${id}` || herokuURL, {
+        await fetch(`http://localhost:5000/${id}`, {
             method: "DELETE"
         });
 
