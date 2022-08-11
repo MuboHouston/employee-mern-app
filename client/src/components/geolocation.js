@@ -8,14 +8,9 @@ export default function Geolocation() {
         <div className="geolocation">
             <h3>Geolocation</h3>
             <br />
-           
-             
-         
-        
                 {
                     location.loaded ? JSON.stringify(location) : "Location data not available."
                 }
-         
         </div>
     )
 }
