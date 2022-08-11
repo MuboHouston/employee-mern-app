@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { config } from "../constants";
+import { config } from "../utils/constants";
 
 export default function Create() {
     const [form, setForm] = useState({

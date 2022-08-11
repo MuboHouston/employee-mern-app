@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { config } from "../constants";
+import { config } from "../utils/constants";
 const URL = config.url;
 
 const Record = (props) => (

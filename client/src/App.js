@@ -8,6 +8,7 @@ import Create from "./components/create";
 import Edit from "./components/edit"
 import RecordList from "./components/recordList";
 import Navbar from "./components/navbar";
+import Geolocation from "./components/geolocation";
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Route exact path="/" element={<RecordList />} />
                 <Route path="/edit/:id" element={<Edit />} />
                 <Route path="/create" element={<Create />} />
+                <Route path="/geolocation" element={<Geolocation />} />
             </Routes>
         </div>
     )
